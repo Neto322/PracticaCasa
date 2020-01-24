@@ -8,7 +8,7 @@
 
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
-
+#include <math.h>
 #include <iostream>
 
 using namespace std;
@@ -91,6 +91,7 @@ void dibujarLineas()
 
 	glVertex3f(-0.3f, 0.1f, 0.0f);
 	glVertex3f(-3.0f,-0.1f,0.0f);
+
 	glEnd();
 
 }
@@ -107,18 +108,45 @@ void dibujarcesped()
 	glVertex3f(-1.0f, -0.4f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 0.0f);
 	glVertex3f(1.0f, -1.0f, 0.0f);
+
 	glEnd();
 }
 
 void dibujartronco()
 {
 	glBegin(GL_QUADS);
+	glColor3f(0.5f, 0.3f, 0.0f);
+	glVertex3f(-0.8f, -0.0f, 0.0f);
+	glVertex3f(-0.5f, -0.0f, 0.0f);
+	glVertex3f(-0.5f, -0.8f, 0.0f);
+	glVertex3f(-0.8f, -0.8f, 0.0f);
+	glEnd();
 	
 }
 
+void dibujarzacate()
+{
+	glBegin(GL_LINES);
+	glColor3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(-0.4f, -0.8f, 0.0f);
+	glVertex3f(-0.3f, -0.9f, 0.0f);
+	glEnd();
+}
+void dibujarcirculo()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f( -0.8* cos(i * 3.14159 / 180)-0.2, 0.8 * sin(i * 3.14159/180), 0.0f);
+	}
+	glEnd();
+}
 void dibujar() {
 	dibujarcesped();
 	dibujartronco();
+	dibujarzacate();
+	dibujarcirculo();
 }
 
 int main()
