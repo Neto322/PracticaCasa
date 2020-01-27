@@ -129,16 +129,23 @@ void dibujarzacate()
 	glBegin(GL_LINES);
 	glColor3f(0.0f, 0.0f, 0.0f);
 	glVertex3f(-0.4f, -0.8f, 0.0f);
+	glVertex3f(-0.39f, -0.78f, 0.0f);
+	glVertex3f(-0.38f, -0.8f, 0.0f);
 	glVertex3f(-0.3f, -0.9f, 0.0f);
+	glColor3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(0.4f, -0.8f, 0.0f);
+	glVertex3f(0.39f, -0.78f, 0.0f);
+	glVertex3f(0.38f, -0.8f, 0.0f);
+	glVertex3f(0.3f, -0.9f, 0.0f);
 	glEnd();
 }
 void dibujarcirculo()
 {
 	glBegin(GL_POLYGON);
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.99f, 1.0f, 0.0f);
 	for (double i = 0; i < 360.0; i += 5.0)
 	{
-		glVertex3f( -0.8* cos(i * 3.14159 / 180)-0.2, 0.8 * sin(i * 3.14159/180), 0.0f);
+		glVertex3f( -0.2* cos(i * 3.14159 / 180)-0.6, 0.2 * sin(i * 3.14159/180)+0.7, 0.0f);
 	}
 	glEnd();
 }
