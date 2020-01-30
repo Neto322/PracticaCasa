@@ -98,7 +98,85 @@ void dibujarLineas()
 
 void dibujarnubes()
 {
+
+
+	glPushMatrix();
+	glTranslatef(0.1f, 0.45f, 0.0f);
+	glScalef(0.7f, 0.3f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
 	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.13f, 0.5f, 0.0f);
+	glScalef(0.6f, 0.2f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.6f, 0.67f, 0.0f);
+	glScalef(0.6f, 0.3f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.65f, 0.7f, 0.0f);
+	glScalef(0.6f, 0.2f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.9f, 0.87f, 0.0f);
+	glScalef(0.6f, 0.3f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.95f, 0.9f, 0.0f);
+	glScalef(0.6f, 0.2f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
 }
 void dibujarcesped()
 {
@@ -116,10 +194,10 @@ void dibujartronco()
 {
 	glBegin(GL_QUADS);
 	glColor3f(0.5f, 0.3f, 0.0f);
-	glVertex3f(-0.8f, -0.0f, 0.0f);
-	glVertex3f(-0.5f, -0.0f, 0.0f);
+	glVertex3f(-0.7f, -0.1f, 0.0f);
+	glVertex3f(-0.5f, -0.1f, 0.0f);
 	glVertex3f(-0.5f, -0.8f, 0.0f);
-	glVertex3f(-0.8f, -0.8f, 0.0f);
+	glVertex3f(-0.7f, -0.8f, 0.0f);
 	glEnd();
 	
 }
@@ -139,7 +217,7 @@ void dibujarzacate()
 	glVertex3f(0.3f, -0.9f, 0.0f);
 	glEnd();
 }
-void dibujarcirculo()
+void dibujarsol()
 {
 	glBegin(GL_POLYGON);
 	glColor3f(0.99f, 1.0f, 0.0f);
@@ -149,11 +227,252 @@ void dibujarcirculo()
 	}
 	glEnd();
 }
+void dibujarcasa()
+{
+	glBegin(GL_QUADS);
+	glColor3f(0.4f, 0.2f, 0.0f);
+	glVertex3f(-0.2f, 0.2f, 0.0f);
+	glVertex3f(0.8f, 0.2f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+}
+
+void dibujarhojasdearbol()
+{
+	glPushMatrix();
+	glTranslatef(0.0f, 0.0f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(0.38, 0.90, 0.36);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+	
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.1f, 0.1f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(0.38, 0.90, 0.36);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0f, 0.2f, 0.0f);
+	glBegin(GL_POLYGON);
+	glColor3f(0.38, 0.90, 0.36);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+
+}
+
+void 	dibujarlineasdesol()
+{
+	glPushMatrix();
+
+	glBegin(GL_LINES);
+	glColor3f(0.99f, 1.0f, 0.0f);
+
+
+
+	glVertex3f(-0.8f, 0.8f, 0.0f);
+	glVertex3f(-0.9f, 0.9f, 0.0f);
+
+	glVertex3f(-0.84f, 0.7f, 0.0f);
+	glVertex3f(-0.94f, 0.69f, 0.0f);
+
+	glVertex3f(-0.8f, 0.6f, 0.0f);
+	glVertex3f(-0.96f, 0.5f, 0.0f);
+	
+	glEnd();
+
+	glPopMatrix();
+
+	
+
+	glPushMatrix();
+
+	glTranslatef(-1.2f, 0.0f, 0.0f);
+	glRotatef(180.0f, 0.0f, 1.0f, 0.0f);
+	glBegin(GL_LINES);
+	glColor3f(0.99f, 1.0f, 0.0f);
+
+
+
+	glVertex3f(-0.8f, 0.8f, 0.0f);
+	glVertex3f(-0.9f, 0.9f, 0.0f);
+
+	glVertex3f(-0.84f, 0.7f, 0.0f);
+	glVertex3f(-0.94f, 0.69f, 0.0f);
+
+	glVertex3f(-0.8f, 0.6f, 0.0f);
+	glVertex3f(-0.96f, 0.5f, 0.0f);
+
+	glEnd();
+
+	glPopMatrix();
+
+
+	
+}
+
+void 	dibujarpuerta()
+{
+	glPushMatrix();
+
+	glScalef(0.3f,0.5f,0.0f);
+
+	glTranslatef(0.6f, -0.7f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0f, 0.6f, 0.5f);
+	glVertex3f(-0.2f, 0.1f, 0.0f);
+	glVertex3f(0.8f, 0.1f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+
+	glPopMatrix();
+
+}
+
+void dibujarpicaporte()
+{
+	glPushMatrix();
+	glTranslatef(0.5f, -0.45f, 0.0f);
+
+	glScalef(0.2f, 0.2f, 0.0f);
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0f, 0.0f, 0.0f);
+	for (double i = 0; i < 360.0; i += 5.0)
+	{
+		glVertex3f(-0.2 * cos(i * 3.14159 / 180) - 0.6, 0.2 * sin(i * 3.14159 / 180) - 0.2, 0.0f);
+	}
+
+	glEnd();
+	glPopMatrix();
+}
+void dibujarventana()
+{
+
+
+	glPushMatrix();
+
+	glScalef(0.5f, 0.5f, 0.0f);
+
+	glTranslatef(0.6f, 0.2f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.90, 0.49, 0.07);
+	glVertex3f(-0.2f, 0.1f, 0.0f);
+	glVertex3f(0.8f, 0.1f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+
+	glPopMatrix();
+
+	glPushMatrix();
+
+	glScalef(0.42f, 0.42f, 0.0f);
+
+	glTranslatef(0.8f, 0.2f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.09, 0.82, 0.90);
+	glVertex3f(-0.2f, 0.1f, 0.0f);
+	glVertex3f(0.8f, 0.1f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+
+	glPopMatrix();
+
+	glPopMatrix();
+
+	glPushMatrix();
+
+	glScalef(0.05f, 0.42f, 0.0f);
+
+	glTranslatef(8.8f, 0.2f, 0.0f);
+
+	glBegin(GL_QUADS);
+
+	glColor3f(0.90, 0.49, 0.07);
+
+	glVertex3f(-0.2f, 0.1f, 0.0f);
+	glVertex3f(0.8f, 0.1f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+
+	glPopMatrix();
+
+	
+}
+void ventana2()
+{
+	glPushMatrix();
+
+	glScalef(0.42f, 0.05f, 0.0f);
+
+	glTranslatef(8.8f, 0.2f, 0.0f);
+
+	glBegin(GL_QUADS);
+
+	glColor3f(0.90, 0.49, 0.07);
+
+	glVertex3f(-0.2f, 0.1f, 0.0f);
+	glVertex3f(0.8f, 0.1f, 0.0f);
+	glVertex3f(0.8f, -0.7f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glEnd();
+
+	glPopMatrix();
+}
+
+void dibujartecho()
+{
+	glBegin(GL_TRIANGLES);
+	glColor3f(0.90, 0.49, 0.07);
+	glVertex3f(-0.3f,0.2f,0.0f);
+	glVertex3f(0.9f, 0.2f, 0.0f);
+	glVertex3f(0.3f, 0.5f, 0.0f);
+	glEnd();
+}
 void dibujar() {
 	dibujarcesped();
 	dibujartronco();
 	dibujarzacate();
-	dibujarcirculo();
+	dibujarsol();
+	dibujartronco();
+	dibujarcasa();
+	dibujarhojasdearbol();
+	dibujarnubes();
+	dibujarlineasdesol();
+
+	dibujarpuerta();
+
+	dibujarpicaporte();
+
+	dibujarventana();
+
+	ventana2();
+
+	dibujartecho();
 }
 
 int main()
